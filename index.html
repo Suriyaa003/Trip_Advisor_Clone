@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripadvisor</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <!--font awesome cdn link-->
+    <script src="https://kit.fontawesome.com/f648aa3f20.js" crossorigin="anonymous"></script>
+    <!--for my sheet-->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .like-btn {
+            color: red;
+        }
+
+        .like-btn.liked {
+            color: blue;
+        }
+
+        .like-btn {
+            animation: none;
+        }
+
+        .like-btn:hover {
+            cursor: pointer;
+        }
+
+        @keyframes popAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* New button styles */
+        .body__card2 button {
+            background-color: #34E0A1;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .body__card2 button:hover {
+            background-color: #2BC88D;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .body__card2 button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <div class="navbar">
+        <div class="navbar__s1">
+            <img src="./assets/logo.svg" alt="Tripadvisor">
+        </div>
+        <div class="navbar__s2">
+            <span>Discover</span>
+            <span>Trips</span>
+            <span>Review</span>
+            <span>Forums</span>
+        </div>
+        <div class="navbar__s3">
+            <span><i class="fa fa-globe"></i> INR</span>
+            <button>Sign in</button>
+        </div>
+    </div>
+
+    <!-- SEARCH AREA -->
+    <div class="search">
+        <div class="search__s1">Where to?</div>
+        <div class="search__s2">
+            <span><i class="fa fa-home"></i> Search All</span>
+            <span><i class="fa fa-hotel"></i> Hotels</span>
+            <span><i class="fa fa-camera"></i> Things to Do</span>
+            <span><i class="fa fa-utensils"></i> Restaurants</span>
+            <span><i class="fa fa-plane-departure"></i> Flights</span>
+            <span><i class="fa fa-caravan"></i> Holiday Homes</span>
+        </div>
+        <div class="search__s3">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Places to go, things to do, hotels...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="./assets/banner1.jpg" alt="">
+        <img src="./assets/markup.png" alt="">
+        <div class="banner__s1">
+            <h2>World's best hotel chosen by you</h2>
+            <p>From beachside resorts to the most unique stays, See the top 1% of hotels from Travellers' Choice Best of
+                the Best and save your faves</p>
+            <button>Book now</button>
+        </div>
+    </div>
+
+    <!-- BODY CONTENT -->
+    <div class="body">
+        <!-- CONTAINER 1 -->
+        <h2>Stay at the world's top hotels</h2>
+        <p>2025's Travellers' Choice Awards Best of the Best Hotels</p>
+        <div class="body__container">
+            <div class="body__card1">
+                <img src="./assets/card1/01.png" alt="">
+                <span>World</span>
+            </div>
+            <div class="body__card1">
+                <img src="./assets/card1/02.png" alt="">
+                <span>Luxury</span>
+            </div>
+            <div class="body__card1">
+                <img src="./assets/card1/03.png" alt="">
+                <span>Family-Friendly</span>
+            </div>
+            <div class="body__card1">
+                <img src="./assets/card1/04.png" alt="">
+                <span>One of a Kind</span>
+            </div>
+            <div class="body__card1">
+                <img src="./assets/card1/05.png" alt="">
+                <span>All-Inclusive</span>
+            </div>
+        </div>
+        <!-- CONATAINER 2 -->
+        <h2>You might like these</h2>
+        <p>Book these experiences for a close-up look at Erode.</p>
+        <div class="body__container">
+            <div class="body__card2">
+                <img src="./assets/card2/1.jpeg" alt="">
+                <label class="like-btn" onclick="toggleLike(this)"><i class="fa fa-heart"></i></label>
+                <h3>Famous Kodiveri Waterfall Tour from Erode</h3>
+                <span>4.1</span><span>●●●●○</span><span>(13)</span>
+                <p>from ₹100 per adult</p>
+            </div>
+            <div class="body__card2">
+                <img src="./assets/card2/2.jpg" alt="">
+                <label class="like-btn" onclick="toggleLike(this)"><i class="fa fa-heart"></i></label>
+                <h3>Amazing Vellode Bird Sanctuary Tour from Erode</h3>
+                <span>5.0</span><span>●●●●●</span><span>(24)</span>
+                <p>from ₹200 per adult</p>
+            </div>
+            <div class="body__card2">
+                <img src="./assets/card2/3.jpeg" alt="">
+                <label class="like-btn" onclick="toggleLike(this)"><i class="fa fa-heart"></i></label>
+                <h3>Explore the Kongu Food Culture in Erode</h3>
+                <span>4.9</span><span>●●●●●</span><span>(98)</span>
+                <p>from ₹400 per adult</p>
+            </div>
+            <div class="body__card2">
+                <img src="./assets/card2/5.jpeg" alt="">
+                <label class="like-btn" onclick="toggleLike(this)"><i class="fa fa-heart"></i></label>
+                <h3>2N+3D Stay In Bargur Hills Resort With Trekking Guide in Hill Station With Sightseeing and Adventurous Activities</h3>
+                <span>3.7</span><span>●●●●○</span><span>(122)</span>
+                <p>from ₹2,500 per adult</p>
+                <button>Book now</button>
+            </div>
+        </div>
+        <!-- CONTAINER 3 -->
+        <h2>Dream Your Next Trip</h2>
+        <p>2025's Travellers' Choice Awards Best of the Best Hotels</p>
+        <div class="body__container">
+            <div class="body__card1">
+                <img src="./assets/card3/001.jpeg" alt="Mahabalipuram">
+                <span>Thanjavur, India</span>
+            </div>
+            <div class="body__card1">
+                <img src="./assets/card3/002.jpg" alt="Bengaluru">
+                <span>Bengaluru, India</span>
+            </div>
+            <div class="body__card1">
+                <img src="./assets/card3/003.jpg" alt="Tiruchirappalli">
+                <span>Goa, India</span>
+            </div>
+            <div class="body__card1">
+                <img src="./assets/card3/004.jpg" alt="Kashmir">
+                <span>Kashmir, India</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer__one">
+            <div class="footer__one__s1">
+                <h2>About Tripadvisor</h2>
+                <p>About Us</p>
+                <p>Press</p>
+                <p>Resources and Policies</p>
+                <p>Careers</p>
+                <p>Trust and Safety</p>
+                <p>Contact Us</p>
+                <p>Accessibility Statement</p>
+            </div>
+            <div class="footer__one__s2">
+                <h2>Explore</h2>
+                <p>Write a review</p>
+                <p>Add a Place</p>
+                <p>Join</p>
+                <p>Travellers' Choice</p>
+                <p>Help Centre</p>
+                <p>Travel Stories</p>
+            </div>
+            <div class="footer__one__s3">
+                <h2>Do Business With Us</h2>
+                <p>Owners & DMO/CVB</p>
+                <p>Business Advantage</p>
+                <p>Sponsored Placements</p>
+                <p>Access our Content API</p>
+            </div>
+            <div class="footer__one__s4">
+                <h2>Contact Support</h2>
+                <p><i class="fa fa-envelope"></i> support@tripadvisor.com</p>
+                <p><i class="fa fa-phone"></i> +1-800-555-1234</p>
+                <p><i class="fa fa-clock"></i> 24/7 Customer Service</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__two">
+            <p>&copy; 2024 Tripadvisor LLC. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        function toggleLike(element) {
+            element.classList.toggle('liked');
+
+            // Add pop animation
+            element.style.animation = 'none';
+            element.offsetHeight; // Trigger reflow
+            element.style.animation = 'popAnimation 0.3s ease';
+        }
+    </script>
+</body>
+
+</html>
